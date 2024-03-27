@@ -1,1 +1,102 @@
+:root {
+    font-size: 24px;
+    --xxlarge-font: 6rem;
+    --xlarge-font: 3rem;
+    --large-font: 1.5rem;
+    --medium-font:1.25rem;
+
+    --green:#0fbe06;
+    --black: #000000;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    color: var(--green);
+    background-color: var(--black);
+    border-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid;
+}
+
+header>div {
+    display: flex;
+    font-size: var(--xlarge-font);
+}
+
+header>div:last-child {
+    gap: 16px;
+    font-size: var(--large-font);
+}
+
+main {
+    max-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board_container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(25px, 160px));
+    grid-template-rows: repeat(3, minmax(25px, 160px));
+    margin: 10px;
+    grid-gap: 5px;
+    background-color: var(--green);
+}
+
+#board_container > div {
+    font-size: var(--xxlarge-font);
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    max-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid;
+    font-size: var(--medium-font);
+}
+
+#score_display {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dashed;
+}
+
+#score_display>div:first-child {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+button {
+    background-color: inherit;
+    color: inherit;
+    border-left: 2px dashed;
+    font-size: var(--large-font);
+}
+
+#game_log {
+    overflow: hidden;
+}
+
+#game_log>div {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 1rem;
+}
 

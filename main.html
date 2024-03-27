@@ -1,1 +1,47 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thicc Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>Tic Tac Toe</div>
+        <div id="turn_display">
+            <span>Current Turn:</span>
+            <span>X's</span>
+        </div>
+    </header>
+    <main>
+        <div id="board_container"></div>
+    </main>
+    <footer>        
+        <div id="score_display">
+            <div>
+                <div>Score:</div>
+                <div>
+                    <span>X's: </span>
+                    <span id="s_0">0</span>
+                </div>
+                <div>
+                    <span>O's: </span>
+                    <span id="s_1">0</span>
+                </div>
+                <div>Draws: </span>
+                    <span id="s_2">0</span>
+                </div>
+            </div>
+            <div>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+        <div>LOG:</div>
+        <div id="game_log">
+            <div></div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
