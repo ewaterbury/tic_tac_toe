@@ -7,7 +7,6 @@ const TicTacToeFactory = (function() {
                 const div = document.createElement('div');
                 div.setAttribute('class','tile');
                 div.setAttribute('id', `T_${i}`);
-                div.innerHTML = '';
                 container.appendChild(div);
             }
         })();
@@ -63,22 +62,20 @@ const TicTacToeFactory = (function() {
                 } else if (result === 'OOO'){
                     return 'O'
                 } else if (gameState.indexOf('') === -1) {
-                    return 'T'
+                    return 'Draw'
                 } 
             }
         })();
 
         const updateScore = (() => {
-            if (checkWin === 'X') {
-                players.score[0] ++
-                return "WINNER: X's"
-            } else if (checkWin === 'O'){
-                players.score[1] ++
-                
-                return "WINNER: O's"
-            } else if (checkWin === 'T'){
-                players.score[2] ++
-                return "WINNER: Draw"
+            const playerList = ['X', 'O', 'Draw'];
+            let i = 0;
+            for (const p of playerList) {
+                if (checkWin === p) {
+                    players.score[i] ++
+                    return `WINNER: ${p}`
+                }
+            i++
             }
             return
         })();
@@ -132,8 +129,9 @@ const TicTacToeFactory = (function() {
 
         reset() {
             resetGame();
-        }
+        },
     };
+    
 })();
 
 const DisplayFactory = (function() {
